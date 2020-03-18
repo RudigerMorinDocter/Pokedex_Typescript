@@ -25,7 +25,8 @@ export class ListPokemonComponent implements OnInit {
   //Initialisation du composant (sur son cycle de vie)
   ngOnInit()
   {
-    this.pokemons = this.pokemonsService.getPokemons(); //Constante POKEMONS
+    this.pokemonsService.getPokemons()
+      .subscribe(pokemons => this.pokemons = pokemons);
   }
 
   //Création d'une méthode (gestion du clic d'un utilisateur sur un pokemon !)

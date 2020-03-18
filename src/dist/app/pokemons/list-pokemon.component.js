@@ -25,7 +25,9 @@ var ListPokemonComponent = /** @class */ (function () {
     //Obligatoire quand on implemente OnInit !
     //Initialisation du composant (sur son cycle de vie)
     ListPokemonComponent.prototype.ngOnInit = function () {
-        this.pokemons = this.pokemonsService.getPokemons(); //Constante POKEMONS
+        var _this = this;
+        this.pokemonsService.getPokemons()
+            .subscribe(function (pokemons) { return _this.pokemons = pokemons; });
     };
     //Création d'une méthode (gestion du clic d'un utilisateur sur un pokemon !)
     ListPokemonComponent.prototype.selectPokemon = function (pokemon) {
