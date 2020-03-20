@@ -12,8 +12,8 @@ import { POKEMONS } from './pokemons/mock-pokemons';
   selector: 'pokemon-app',
   templateUrl: `./app/app.component.html`,  //Chemin vers mon template
 })
-export class AppComponent
-{ 
-  //Rôle pur d'affichage
-  //Parent des composants
+export class AppComponent 
+{
+    //Rôle pur d'affichage
+    //Parent des composants
 }

@@ -14,6 +14,8 @@ import { EditPokemonComponent } from './edit-pokemon.component';
 import { PokemonFormComponent } from './pokemon-form.component';
 import { PokemonSearchComponent } from './search-pokemon.component';
 
+import { AuthGuard } from '../auth-guard.service';
+
 @NgModule({
     imports: [
         CommonModule,
@@ -30,6 +32,6 @@ import { PokemonSearchComponent } from './search-pokemon.component';
         BorderCardDirective,
         PokemonTypeColorPipe
     ],
-    providers: [PokemonsService]
+    providers: [PokemonsService, AuthGuard]
 })
 export class PokemonsModule { }

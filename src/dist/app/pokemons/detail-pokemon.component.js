@@ -32,7 +32,7 @@ var DetailPokemonComponent = /** @class */ (function () {
             .subscribe(function (_) { return _this.goBack(); });
     };
     DetailPokemonComponent.prototype.goBack = function () {
-        this.router.navigate(['/pokemons']);
+        this.router.navigate(['/pokemon/all']);
     };
     DetailPokemonComponent.prototype.goEdit = function (pokemon) {
         var link = ['/pokemon/edit', pokemon.id];

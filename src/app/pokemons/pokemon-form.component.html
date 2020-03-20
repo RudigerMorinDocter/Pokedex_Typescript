@@ -1,3 +1,14 @@
+<style>
+  input:focus {
+  border-bottom: 1px solid #5c6bc0 !important;
+  box-shadow: 0 1px 0 0 #5c6bc0 !important;
+  }
+
+  label.active {
+  color: #5c6bc0 !important;
+  }
+</style>
+
 <form *ngIf="pokemon" (ngSubmit)="onSubmit()" #pokemonForm="ngForm">
     <div class="row">
       <div class="col s8 offset-s2">
@@ -71,7 +82,7 @@
           <div class="divider"></div>
           <div class="section center">
             <button type="submit"
-              class="waves-effect waves-light btn"
+              class="light-green waves-effect waves-light btn"
               [disabled]="!pokemonForm.form.valid">
               Valider</button>
           </div>
